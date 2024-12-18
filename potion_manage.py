@@ -37,7 +37,7 @@ async def shop_message(ctx, user_data):
     embed.description += f"🪙 Gold Storage: {user_data.get("coins", 0)} gold coins\n💧 Elixir Storage: {user_data.get("elixirs", 0)} elixir\n"
     embed.description += "Use `/buy [id]` to purchase a potion!\nUse `/sell [id]` to unlock a potion!\nUse `/unlock [id]` to unlock a potion!"
     embed.set_footer(text=f"{user_data.get("username")} | PotionWorks - /help")
-    with open("/Users/paulnguyen/Desktop/potionworks discord bot/potion_logo.png", "rb") as f:
+    with open("/Users/paulnguyen/Desktop/potionworks/potionworks-repository/potion_logo.png", "rb") as f:
         file = discord.File(f, filename="potion_logo.png")
         embed.set_thumbnail(url="attachment://potion_logo.png")
     await ctx.respond(file=file, embed=embed)
